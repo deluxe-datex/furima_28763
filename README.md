@@ -56,7 +56,7 @@
 - has_one :trading_history
 
 
-## trading_historyテーブル
+## trading_historiesテーブル
 
 | Column        | Type       | Options                        |
 | ------------- | ---------- | ------------------------------ |
