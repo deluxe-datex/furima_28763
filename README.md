@@ -53,7 +53,7 @@
 
 ### Association
 
-- has_many :trading_history
+- has_one :trading_history
 
 
 ## trading_historyテーブル
