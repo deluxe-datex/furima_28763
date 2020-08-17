@@ -36,7 +36,6 @@
 ### Association
 
 - belongs_to :user
-- has_one :destinations
 - has_one :trading_history
 
 ## destinations テーブル
