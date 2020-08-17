@@ -53,8 +53,6 @@
 
 ### Association
 
-- has_many :users
-- has_many :items
 - has_many :trading_history
 
 
