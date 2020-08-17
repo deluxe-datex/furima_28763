@@ -17,6 +17,7 @@
 
 - has_many :items
 - has_many :destinations
+- has_many :trading_history
 
 ## items テーブル
 
@@ -37,6 +38,7 @@
 
 - belongs_to :user
 - has_many :destinations
+- has_many :trading_history
 
 ## destinations テーブル
 
@@ -48,10 +50,20 @@
 | address       | string     | null: false                    |
 | building_name | string     | null: false                    |
 | phone_number  | string     | null: false                    |
-| user_id       | references | null: false, foreign_key: true |
-| item_id       | references | null: false, foreign_key: true |
 
 ### Association
 
 - has_many :users
 - has_many :items
+
+## trading_historyテーブル
+
+| Column        | Type       | Options                        |
+| ------------- | ---------- | ------------------------------ |
+| user          | references | null: false, foreign_key: true |
+| item          | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :user
+- belongs_to :item
