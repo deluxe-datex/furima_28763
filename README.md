@@ -17,7 +17,6 @@
 
 - has_many :items
 - has_many :destinations
-- has_one :card
 
 ## items テーブル
 
