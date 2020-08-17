@@ -19,19 +19,6 @@
 - has_many :destinations
 - has_one :card
 
-## cards テーブル
-
-| Column          | Type       | Options                        |
-| --------------- | ---------- | ------------------------------ |
-| card_number     | integer    | null: false                    |
-| expiration_date | integer    | null: false                    |
-| security_code   | integer    | null: false                    |
-| user_id         | references | null: false, foreign_key: true |
-
-### Association
-
-- belongs_to :user
-
 ## items テーブル
 
 | Column      | Type       | Options                        |
