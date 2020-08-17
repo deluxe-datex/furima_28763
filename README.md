@@ -38,7 +38,7 @@
 
 - belongs_to :user
 - has_many :destinations
-- has_many :trading_history
+- has_one :trading_history
 
 ## destinations テーブル
 
