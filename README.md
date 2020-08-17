@@ -17,7 +17,7 @@
 
 - has_many :items
 - has_many :destinations
-- has_many :trading_history
+- has_many :trading_histories
 
 ## items テーブル
 
