@@ -24,7 +24,7 @@
 | ----------- | ---------- | ------------------------------ |
 | image       | string     | null: false                    |
 | name        | string     | null: false                    |
-| description | string     | null: false                    |
+| description | text       | null: false                    |
 | category    | string     | null: false                    |
 | status      | string     | null: false                    |
 | burden      | string     | null: false                    |
