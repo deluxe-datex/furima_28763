@@ -55,6 +55,8 @@
 
 - has_many :users
 - has_many :items
+- has_many :trading_history
+
 
 ## trading_historyテーブル
 
@@ -67,3 +69,4 @@
 
 - belongs_to :user
 - belongs_to :item
+- belongs_to :destination
