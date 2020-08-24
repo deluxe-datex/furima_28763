@@ -4,7 +4,16 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  validates :name, presence: true
-  validates :email, uniqueness: true
-  
+  with_options presence: true do
+    validates :name
+    validates :birth_day
+    with_options format: {with: /\A(?:\p{Hiragana}|\p{Katakana}|[ー－]|[一-龠々])+\z/} do
+      validates :family_name
+      validates :first_name
+    end
+    with_options format: {with: /\A[ァ-ヶー－]+\z/} do
+      validates :family_name_kana
+      validates :first_name_kana
+    end
+  end
 end
