@@ -78,6 +78,11 @@ RSpec.describe User, type: :model do
         @user.valid?
       end
 
+      it 'ユーザー本名は全角で入力させること' do
+        @user.first_name = 'yamada'
+        @user.valid?
+      end
+
       it 'ユーザー本名のフリガナ（漢字・ひらがな・カタカナ）が、名字と名前がそれぞれ必須であること' do
         @user.family_name_kana = ''
         @user.valid?
