@@ -1,6 +1,6 @@
 class Item < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
-  belongs_to_active_hash :category, :status, :burden, :prefecture
+  belongs_to_active_hash :category, :status, :burden, :prefecture, :day
 
   belongs_to :user
   has_one :trading_history
@@ -11,4 +11,5 @@ class Item < ApplicationRecord
   validates :status_id, numericality: { other_than: 1 }
   validates :burden_id, numericality: { other_than: 1 }
   validates :prefecture_id, numericality: { other_than: 1 }
+  validates :day_id, numericality: { other_than: 1 }
 end
