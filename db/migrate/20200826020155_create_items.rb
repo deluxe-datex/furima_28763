@@ -16,6 +16,7 @@ class CreateItems < ActiveRecord::Migration[6.0]
       t.integer :status_id, null: false
       t.integer :burden_id, null: false
       t.integer :prefecture_id, null: false
+      t.integer :day_id, null: false
       t.timestamps
     end
   end
