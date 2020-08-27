@@ -5,16 +5,19 @@ class ItemsController < ApplicationController
   end
   
   def new
-
+    
   end
+
+  def create
+    
+  end
+
 
   private
 
   def login_check
     unless user_signed_in?
-      
       redirect_to root_path
     end
   end
-
 end
