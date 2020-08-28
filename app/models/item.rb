@@ -1,6 +1,6 @@
 class Item < ApplicationRecord
 
-  belongs_to :user
+  belongs_to :user, optional: true
   has_one :trading_history
   has_one_attached :image
   extend ActiveHash::Associations::ActiveRecordExtensions
@@ -12,7 +12,7 @@ class Item < ApplicationRecord
 
   with_options presence: true do
     validates :image, presence: {message: '画像は一枚必須であること'}
-    validates :name
+    validates :product_name
     validates :description
     validates :category_id, numericality: { other_than: 1 }
     validates :status_id, numericality: { other_than: 1 }
