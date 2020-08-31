@@ -1,0 +1,2 @@
+class TradingHistory < ApplicationRecord
+end
