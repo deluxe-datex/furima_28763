@@ -23,15 +23,15 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
   end
 
-  def edit
-    @item = Item.find(params[:id])
-  end
+  #def edit
+    #@item = Item.find(params[:id])
+  #end
 
-  def destroy
-    @item = Item.find(params[:id])
-    @item.destroy
-    redirect_to root_path
-  end
+  #def destroy
+    #@item = Item.find(params[:id])
+    #@item.destroy
+    #redirect_to root_path
+  #end
 
   private
 
