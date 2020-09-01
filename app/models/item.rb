@@ -1,5 +1,4 @@
 class Item < ApplicationRecord
-
   belongs_to :user, optional: true
   has_one :trading_history
   has_one_attached :image
@@ -11,7 +10,7 @@ class Item < ApplicationRecord
   belongs_to_active_hash :day
 
   with_options presence: true do
-    validates :image, presence: {message: '画像は一枚必須であること'}
+    validates :image, presence: { message: '画像は一枚必須であること' }
     validates :product_name
     validates :description
     validates :category_id, numericality: { other_than: 1 }
@@ -19,6 +18,6 @@ class Item < ApplicationRecord
     validates :burden_id, numericality: { other_than: 1 }
     validates :prefecture_id, numericality: { other_than: 1 }
     validates :day_id, numericality: { other_than: 1 }
-    validates :price, numericality: {greater_than: 299, less_than: 10000000, message: '300以上9999999以下で入力してください'}
+    validates :price, numericality: { greater_than: 299, less_than: 10_000_000, message: '300以上9999999以下で入力してください' }
   end
 end

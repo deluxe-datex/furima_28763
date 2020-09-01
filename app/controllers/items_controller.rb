@@ -1,14 +1,12 @@
 class ItemsController < ApplicationController
-  
   before_action :login_check, only: :new
 
   def index
-    @items = Item.all.order("created_at DESC")
+    @items = Item.all.order('created_at DESC')
   end
-  
+
   def new
     @item = Item.new
-    
   end
 
   def create
@@ -38,9 +36,7 @@ class ItemsController < ApplicationController
   private
 
   def login_check
-    unless user_signed_in?
-      redirect_to root_path
-    end
+    redirect_to root_path unless user_signed_in?
   end
 
   def item_params
