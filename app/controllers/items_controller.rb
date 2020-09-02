@@ -1,7 +1,6 @@
 class ItemsController < ApplicationController
   before_action :login_check, only: :new
   before_action :set_item, only: [:show, :edit, :update]
-  
 
   def index
     @items = Item.all.order('created_at DESC')
@@ -22,11 +21,9 @@ class ItemsController < ApplicationController
   end
 
   def show
-    
   end
 
   def edit
-    
   end
 
   def update
@@ -37,11 +34,11 @@ class ItemsController < ApplicationController
     end
   end
 
-  #def destroy
-    #@item = Item.find(params[:id])
-    #@item.destroy
-    #redirect_to root_path
-  #end
+  # def destroy
+  # @item = Item.find(params[:id])
+  # @item.destroy
+  # redirect_to root_path
+  # end
 
   private
 
