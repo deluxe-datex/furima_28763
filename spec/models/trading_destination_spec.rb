@@ -7,7 +7,7 @@ RSpec.describe TradingDestination, type: :model do
 
   describe '商品購入機能' do
     context '商品の購入がうまくいくとき' do
-      it 'カード情報、郵便番号、都道府県、市区町村、番地、電話番号が存在すれば購入できる' do
+      it 'クレジットカード情報、郵便番号、都道府県、市区町村、番地、電話番号が存在すれば購入できる' do
         expect(@trading_destination).to be_valid
       end
     end
