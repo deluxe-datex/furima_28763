@@ -6,15 +6,15 @@ class User < ApplicationRecord
 
   with_options presence: true do
     validates :name
-    validates :birth_day
-    with_options format: { with: /\A(?:\p{Hiragana}|\p{Katakana}|[ー－]|[一-龠々])+\z/ } do
+    with_options format: { with: /\A(?:\p{Hiragana}|\p{Katakana}|[ー－]|[一-龠々])+\z/, message: 'は全角(漢字・ひらがな・カタカナ)で入力してください'} do
       validates :family_name
       validates :first_name
     end
-    with_options format: { with: /\A[ァ-ヶー－]+\z/ } do
+    with_options format: { with: /\A[ァ-ヶー－]+\z/ , message: 'はカタカナで入力してください'} do
       validates :family_name_kana
       validates :first_name_kana
     end
+    validates :birth_day
   end
 
   has_many :items
